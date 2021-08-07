@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  top: 0;
+  overflow-x: hidden;
+}
+
+#navbar > .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 1;
+  /* background-color: white; */
+  height: 3rem;
+  color: white;
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+}
+.navbar-nav > li {
+  margin-right: 1rem;
+  text-transform: uppercase;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  
+  
+}
+.nav-link{
+    color: white;
+}
+#page{
+    background-image: url('img/altumcode-dMUt0X3f59Q-unsplash.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-attachment: fixed; */
+    
+}
+#main-title{
+    letter-spacing: 8px; 
+    text-transform: uppercase;
+}
+#button1,#button2 {
+  text-transform: uppercase;
+  margin-right: 1rem;
+  height: 2rem;
+  width: 8rem;
+  border-radius: 3px;
+  border: none;
+  color: rgb(54, 54, 54);
+  transition: 0.4s;
+  
+}
+#button1{
+    border: 2px solid white;
+    background: none;
+    color: white;
+    
+}
+#button1:hover{
+    color: white;
+    background-color: rgba(160, 160, 160, 0.363);
+}
+#button2:hover{
+    color:black;
+    background-color: rgba(224, 222, 222, 0.781);
+}
+#picture{
+    display: grid;
+    grid-row: inherit;
+    grid-template-rows: 2;
+    
+    /* flex-wrap: wrap; */
+}
+#link{
+    color: black;
+    transition: 0.4s;
+}
+#link:hover{
+    color: rgb(156, 154, 154);
+}
+#service {
+  padding-top: 3rem;
+  min-height: 100vh;
+  background-color: white;
+}
+#animate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem ;
+  min-height: 30vh;
+  color: white;
+}
+#greatwork {
+  margin-top: 3rem;
+  min-height: 60vh;
+}
+#header-title {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80%;
+  align-items: center;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  width: 100%;
+  height: 10rem;
+  justify-content: center;
+  background-color: rgba(192, 192, 192, 0.877);
+  color: white;
+}
+
+@property --num_award {
+  syntax: "<integer>";
+  initial-value: 59;
+  inherits: false;
+}
+@property --num_team {
+  syntax: "<integer>";
+  initial-value: 34;
+  inherits: false;
+}
+@property --num_client {
+  syntax: "<integer>";
+  initial-value: 1054;
+  inherits: false;
+}
+@property --num_project {
+  syntax: "<integer>";
+  initial-value: 154;
+  inherits: false;
+}
+
+#award {
+  animation: counter 5s none ease-in;
+  counter-reset: num var(--num_award);
+  font: 800 40px system-ui;
+}
+#award::after {
+  content: counter(num);
+}
+
+@keyframes counter {
+  from {
+    --num_award: 0;
+  }
+  to {
+    --num_award: 59;
+  }
+}
+#teams {
+  animation: counter_team 5s none ease-in;
+  counter-reset: num_team var(--num_team);
+  font: 800 40px system-ui;
+}
+#teams::after {
+  content: counter(num_team);
+}
+
+@keyframes counter_team {
+  from {
+    --num_team: 0;
+  }
+  to {
+    --num_team: 34;
+  }
+}
+#projects {
+  animation: counter_project 5s none ease-in;
+  counter-reset: num_project var(--num_project);
+  font: 800 40px system-ui;
+}
+#projects::after {
+  content: counter(num_project);
+}
+
+@keyframes counter_project {
+  from {
+    --num_project: 0;
+  }
+  to {
+    --num_project: 34;
+  }
+}
+#clients {
+  animation: counter_client 5s none ease-in;
+  counter-reset: num_client var(--num_client);
+  font: 800 40px system-ui;
+}
+#clients::after {
+  content: counter(num_client);
+}
+
+@keyframes counter_client {
+  from {
+    --num_client: 0;
+  }
+  to {
+    --num_client: 1054;
+  }
+}
+#header-title{
+    letter-spacing: 4px;
+    
+  }
+  #logo,#basecamp{
+    height: 10rem;
+    background: rgb(202, 52, 52);
+  }
+  #coffee,#icweb{
+    height: 10rem;
+    background: white;
+    color: black;
+
+
+  }
+ 
+@media only screen and (max-width: 767px) {
+  #menu {
+    display: none;
+  }
+  #button1 {
+    display: none;
+  }
+  #detail {
+    margin: auto;
+    width: auto ;
+   
+  }
+  #main-title{
+    letter-spacing: 0px;
+  }
+  #sub-title{
+    font-size: 30px;
+  }
+  #button2{
+      height: 3rem;
+      width: 9rem;
+  }
+ 
+  #nav-header{
+    font-size: 30px;
+    
+  }
+  #logo,#basecamp{
+    height: 10rem;
+    background: white;
+    color: black;
+  }
+  #coffee,#icweb{
+    height: 10rem;
+    background: rgb(202, 52, 52);
+    color: white;
+
+  }
+
+
+}
+@media only screen and (max-width: 575px){
+    #detail {
+        margin: auto;
+        width: 25rem ;
+       
+      }
+}
